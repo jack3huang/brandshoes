@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Mockingjay</title>
+  <meta name="description" content="Mockingjay men's leather shoes OEM / ODM manufacturer.">
+  <link rel="stylesheet" href="/brandshoes/styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="/brandshoes/" class="brand">Mocking<b>jay</b></a>
+    <nav class="links">
+      <a href="/brandshoes/">Home</a>
+      <a href="/brandshoes/products/">Products</a>
+      <a href="/brandshoes/#oem-odm">OEM / ODM</a>
+      <a href="/brandshoes/#craftsmanship">Craftsmanship</a>
+      <a href="/brandshoes/contact/">Contact</a>
+    </nav>
+    <div class="nav-r"><a href="/brandshoes/contact/" class="pill-link">Inquiry</a></div>
+  </div>
+</header>
+<main><section><div class="wrap detail-grid"><div><nav class="breadcrumbs" aria-label="Breadcrumb"><span class="ln"></span><a href="/brandshoes/">Home</a><span class="crumb"><span class="sep">/</span><span>Contact</span></span></nav><div class="pipe"><span class="ln"></span><span class="eyebrow">Contact Mockingjay</span></div><h1 style="font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:500;line-height:1;margin:14px 0;">Start an OEM / ODM inquiry.</h1><p class="lead" style="max-width:none;">Mockingjay is a men&apos;s leather shoes OEM / ODM manufacturer based in Shenzhen, serving private-label partners across Europe, America and the Middle East.</p><div class="spec-grid" style="margin-top:28px;"><div class="spec"><strong>Company</strong><span>Mockingjay</span></div><div class="spec"><strong>Contact Person</strong><span>Jack</span></div><div class="spec"><strong>Phone</strong><span>13900000000</span></div><div class="spec"><strong>WhatsApp</strong><span>13900000000</span></div><div class="spec" style="grid-column:1 / -1;"><strong>Address</strong><span>Building 5, Dafu Industrial Zone, Longgang, Shenzhen, China</span></div></div></div><form class="tile admin-card" id="inquiry-form"><div class="form-grid"><div class="field"><label>Your Name</label><input class="input" placeholder="Name"></div><div class="field"><label>Email / WhatsApp</label><input class="input" placeholder="Contact details"></div></div><div class="field" style="margin-top:14px;"><label>Inquiry</label><textarea class="textarea" id="inquiry-message">I am interested in men&apos;s leather shoes OEM / ODM production. Please send me more details.</textarea></div><div class="row-actions"><button class="btn button-reset" type="submit">Send Inquiry</button><a class="pill-link" id="whatsapp-link" href="https://wa.me/8613900000000">WhatsApp Jack</a></div><p class="notice" id="thanks" hidden>Thank you. Please contact us by WhatsApp or email.</p></form></div></section></main>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><div class="brand">Mocking<b>jay</b></div><p>Men&apos;s leather shoes OEM / ODM manufacturer based in Shenzhen since 2010. Serving private-label partners across Europe, America and the Middle East.</p></div>
+      <div class="fcol"><h4>Products</h4><a href="/brandshoes/products/">Oxfords</a><a href="/brandshoes/products/">Derbies</a><a href="/brandshoes/products/">Loafers</a><a href="/brandshoes/products/">Boots</a><a href="/brandshoes/products/">Monk Straps</a></div>
+      <div class="fcol"><h4>Company</h4><a href="/brandshoes/">About Mockingjay</a><a href="/brandshoes/#craftsmanship">Craftsmanship</a><a href="/brandshoes/#oem-odm">OEM / ODM</a><a href="/brandshoes/#craftsmanship">Factory Capability</a></div>
+      <div class="fcol"><h4>Contact</h4><span>Jack</span><span>Phone / WhatsApp: 13900000000</span><span>Building 5, Dafu Industrial Zone, Longgang, Shenzhen, China</span></div>
+    </div>
+    <div class="foot-bot"><span>© 2026 Mockingjay Footwear</span><span>Shenzhen · Europe · America · Middle East</span></div>
+  </div>
+</footer>
+<script>
+var productMap = {"MJ-OX-001":"Cap-Toe Oxford","MJ-OX-002":"Wholecut Oxford","MJ-DE-001":"Plain-Toe Derby","MJ-DE-002":"Longwing Brogue Derby","MJ-LO-001":"Penny Loafer","MJ-MS-001":"Double Monk Strap","MJ-BT-001":"Chelsea Boot","MJ-BT-002":"Chukka Boot","MJ-OX-003":"Quarter Brogue Oxford","MJ-OX-004":"Patent Leather Oxford","MJ-OX-005":"Plain Vamp Oxford","MJ-OX-006":"Burnished Toe Oxford","MJ-BR-001":"Full Brogue Wingtip","MJ-BR-002":"Semi Brogue Derby","MJ-DR-001":"Leather Driving Moccasin","MJ-DS-001":"Minimal Leather Dress Sneaker"};
+var params = new URLSearchParams(window.location.search);
+var productId = params.get("productId");
+var message = document.getElementById("inquiry-message");
+if (productId && productMap[productId]) message.value = "I am interested in Product ID: " + productId + ", Product Name: " + productMap[productId] + ".";
+function syncWhatsapp(){
+  document.getElementById("whatsapp-link").href = "https://wa.me/8613900000000?text=" + encodeURIComponent(message.value || "Hello Jack, I would like to discuss men's leather shoes OEM / ODM production.");
+}
+message.addEventListener("input", syncWhatsapp);
+syncWhatsapp();
+document.getElementById("inquiry-form").addEventListener("submit", function(event){ event.preventDefault(); document.getElementById("thanks").hidden = false; });
+</script>
+</body>
+</html>
